@@ -7,6 +7,7 @@ public class HUDScript : MonoBehaviour {
 	int MAXIN_GLI=5;
 	int NGLI = 4;
 	int runGliN=0;
+	float RUNT_GLI=2.8f;
 	float pps= 0.83f;
 	float playerScore = 0;
 	ArrayList timGli;
@@ -17,9 +18,12 @@ public class HUDScript : MonoBehaviour {
 	int refresher=0;
 	int nextGli;
 	public AudioSource audioGli;
+	public AudioSource audioCoin;
 	public GameObject player;
 	InvertGravityScript grav;
 	PlayerControllerScript pcs;
+	public float coinsCombo = 0f;
+
 
 	void OnDisable()
 	{
@@ -68,6 +72,10 @@ public class HUDScript : MonoBehaviour {
 	void Update () {
 		timer += Time.deltaTime;
 		oTimer += Time.deltaTime;
+		coinsCombo -= Time.deltaTime;
+		if (coinsCombo < 0f) {
+			coinsCombo =0f;		
+		}
 		runGliN = runningGli.Count;
 
 		for (int i=0; i<runGliN; i++) {
@@ -111,8 +119,8 @@ public class HUDScript : MonoBehaviour {
 		GUI.Label (new Rect (10, 10, 100, 30), "Score: " + (int)playerScore);
 		GUI.Label (new Rect(Screen.width-120,10,100,30),"" + timer);
 		//debug
-		GUI.Label (new Rect(Screen.width-120,40,100,30),"GliDeBug: " + refresher);
-		GUI.Label (new Rect(Screen.width-135,70,120,30),"RunningGlitches: " + runGliN);
+		//GUI.Label (new Rect(Screen.width-120,40,100,30),"GliDeBug: " + refresher);
+		//GUI.Label (new Rect(Screen.width-135,70,120,30),"RunningGlitches: " + runGliN);
 	}
 
 	int activateGlitch(){

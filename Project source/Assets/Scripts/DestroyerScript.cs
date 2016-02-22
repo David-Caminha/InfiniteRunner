@@ -51,7 +51,12 @@ public class DestroyerScript : MonoBehaviour {
 			                                       lastTree.transform.position.z);
 
 			//trocar layer order
-			other.GetComponent<SpriteRenderer>().sortingOrder = Random.Range(-1, 1);
+			int val = Random.Range(-1, 2);
+			if(val == 1)
+				val=3;
+			else
+				val = -1;
+			other.GetComponent<SpriteRenderer>().sortingOrder = val;
 			lastTree = other.gameObject;
 		}
 		else

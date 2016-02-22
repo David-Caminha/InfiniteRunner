@@ -5,6 +5,7 @@ public class PlayerControllerScript : MonoBehaviour {
 
 	public float maxSpeed = 10f;
 	public float jumpForce = 700f;
+
 	bool facingRight = true;
 	public float velMod =1;
 	public bool dblJmpGli=false;
@@ -35,7 +36,7 @@ public class PlayerControllerScript : MonoBehaviour {
 
 	public void jump()
 	{	
-//		audioJump.Play ();
+		audioJump.Play ();
 		anim.SetBool("Ground", false);
 		
 		rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, 0);

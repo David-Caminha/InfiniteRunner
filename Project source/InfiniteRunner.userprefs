@@ -1,8 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\PPIN_Dmo\Assets\Standard Assets\Character Controllers\Sources\Scripts\CharacterMotor.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\DestroyerScript.cs">
     <Files>
-      <File FileName="..\PPIN_Dmo\Assets\Standard Assets\Character Controllers\Sources\Scripts\CharacterMotor.js" Line="31" Column="60" />
+      <File FileName="Assets\Scripts\DestroyerScript.cs" Line="58" Column="14" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

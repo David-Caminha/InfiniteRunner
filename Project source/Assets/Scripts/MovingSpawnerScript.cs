@@ -23,10 +23,10 @@ public class MovingSpawnerScript : MonoBehaviour {
 	void Spawn()
 	{
 		GameObject instance = Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity) as GameObject;
-		if(instance.tag == "+1Jump")
-		{
-			ExtraJumpScript script = instance.GetComponent<ExtraJumpScript>();
-			script.controller = playerScript;
+		if(instance.tag == "coin")
+		{	
+			Debug.Log ("gethudscript");
+			instance.GetComponent<PointsUpScript>().hud = mainCamera.GetComponent<HUDScript>();
 		}
 		Invoke("Spawn", Random.Range(spawnMin, spawnMax));
 	}

@@ -24,4 +24,10 @@ public class EndScoreScript : MonoBehaviour {
 
 		GUI.Label (new Rect (Screen.width * 3 / 4, Screen.height / 2, 500, 40), catchyPhrase);
 	}
+
+	void Update()
+	{
+		if(Input.GetButtonDown("Jump"))
+		   Application.LoadLevel(0);
+	}
 }

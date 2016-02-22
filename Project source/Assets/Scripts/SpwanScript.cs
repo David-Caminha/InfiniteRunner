@@ -18,13 +18,8 @@ public class SpwanScript : MonoBehaviour {
 	}
 
 	void Spawn()
-	{
+	{	
 		GameObject instance = Instantiate(obj[Random.Range(0, obj.Length)], transform.position, Quaternion.identity) as GameObject;
-		if(instance.tag == "+1Jump")
-		{
-			ExtraJumpScript script = instance.GetComponent<ExtraJumpScript>();
-			script.controller = playerScript;
-		}
 		Invoke("Spawn", Random.Range(spawnMin, spawnMax));
 	}
 }
